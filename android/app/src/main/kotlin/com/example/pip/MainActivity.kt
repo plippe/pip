@@ -1,4 +1,4 @@
-package com.example.pip
+package com.github.plippe.pips
 
 import io.flutter.embedding.android.FlutterActivity
 

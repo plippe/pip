@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.pip">
+    package="com.github.plippe.pips">
    <application
-        android:label="pip"
+        android:label="pips"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

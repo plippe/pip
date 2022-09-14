@@ -1,8 +1,8 @@
-import 'package:pip/extensions/chaining.dart';
-import 'package:pip/tiles/tile.dart';
-import 'package:pip/extensions/list.dart';
-import 'package:pip/triples/is_triple.dart';
-import 'package:pip/triples/triple.dart';
+import 'package:pips/extensions/chaining.dart';
+import 'package:pips/tiles/tile.dart';
+import 'package:pips/extensions/list.dart';
+import 'package:pips/triples/is_triple.dart';
+import 'package:pips/triples/triple.dart';
 
 class TilePile {
   List<Tile> underlying;

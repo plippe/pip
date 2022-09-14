@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pip/tiles/tile.dart';
-import 'package:pip/tiles/widgets/tile_grid_widget.dart';
-import 'package:pip/games/game_state.dart';
-import 'package:pip/triples/is_triple.dart';
+import 'package:pips/tiles/tile.dart';
+import 'package:pips/tiles/widgets/tile_grid_widget.dart';
+import 'package:pips/games/game_state.dart';
+import 'package:pips/triples/is_triple.dart';
 
 class GameWidget extends StatefulWidget {
   const GameWidget({Key? key}) : super(key: key);

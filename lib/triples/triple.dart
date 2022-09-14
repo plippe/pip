@@ -1,5 +1,5 @@
-import 'package:pip/tiles/tile.dart';
-import 'package:pip/triples/is_triple.dart';
+import 'package:pips/tiles/tile.dart';
+import 'package:pips/triples/is_triple.dart';
 import 'package:trotter/trotter.dart';
 
 class Triple {

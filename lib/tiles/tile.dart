@@ -1,6 +1,6 @@
-import 'package:pip/pips/colors.dart';
-import 'package:pip/pips/numbers.dart';
-import 'package:pip/pips/symbols.dart';
+import 'package:pips/pips/colors.dart';
+import 'package:pips/pips/numbers.dart';
+import 'package:pips/pips/symbols.dart';
 
 class Tile {
   final Numbers number;

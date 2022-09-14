@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pip/tiles/tile.dart';
+import 'package:pips/tiles/tile.dart';
 
 class TileWidget extends StatelessWidget {
   const TileWidget(

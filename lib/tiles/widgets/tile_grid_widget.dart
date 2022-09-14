@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pip/tiles/widgets/tile_widget.dart';
-import 'package:pip/tiles/tile.dart';
+import 'package:pips/tiles/widgets/tile_widget.dart';
+import 'package:pips/tiles/tile.dart';
 
 class TileGridWidget extends StatelessWidget {
   const TileGridWidget(
