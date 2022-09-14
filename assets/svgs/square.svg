@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 100 100">
+   <defs>
+      <pattern height="7" id="striped" patternUnits="userSpaceOnUse" width="1">
+         <path d="M-1,1 H5" stroke="#DC267F" stroke-width="3" />
+      </pattern>
+   </defs>
+   <path d="M 10,10 90,10 90,90 10,90 Z" fill="url(#striped)" stroke="#DC267F" stroke-width="9" />
+</svg>
