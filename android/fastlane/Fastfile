@@ -5,14 +5,30 @@ default_platform(:android)
 platform :android do
   desc "Build and upload to the Google Play's beta track"
   lane :build_and_upload_beta do
-    build_android_app(task: 'assemble', build_type: 'Release')
-    upload_to_play_store(track: 'beta', skip_upload_changelogs: true)
+    version_code = google_play_track_version_codes(track: "beta").last + 1
+
+    build_android_app(
+      task: "bundle",
+      build_type: "Release",
+      properties: {
+        "android.injected.version.code" => version_code,
+        "android.injected.version.name" => "1.0.#{version_code}",
+      }
+    )
+
+    upload_to_play_store(
+      track: "beta",
+      skip_upload_changelogs: true,
+      version_code: version_code,
+      version_name: "1.0.#{version_code}",
+      aab: "../build/app/outputs/bundle/release/app-release.aab",
+    )
   end
 
   desc "Build and capture screenshots"
   lane :build_and_screengrab do
-    build_android_app(task: 'assemble', build_type: 'Debug')
-    build_android_app(task: 'assemble', build_type: 'AndroidTest')
+    build_android_app(task: "assemble", build_type: "Debug")
+    build_android_app(task: "assemble", build_type: "AndroidTest")
 
     screengrab()
   end

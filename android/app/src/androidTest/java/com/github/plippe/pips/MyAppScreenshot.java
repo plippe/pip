@@ -18,7 +18,31 @@ public class MyAppScreenshot {
     public ActivityScenarioRule activityRule = new ActivityScenarioRule<>(MainActivity.class);
 
     @Test
-    public void testTakeScreenshot() {
+    public void testTakeScreenshot0() {
+        onView(isRoot()).check(matches(isDisplayed()));
+        Screengrab.screenshot("GameWidget");
+    }
+
+    @Test
+    public void testTakeScreenshot1() {
+        onView(isRoot()).check(matches(isDisplayed()));
+        Screengrab.screenshot("GameWidget");
+    }
+
+    @Test
+    public void testTakeScreenshot2() {
+        onView(isRoot()).check(matches(isDisplayed()));
+        Screengrab.screenshot("GameWidget");
+    }
+
+    @Test
+    public void testTakeScreenshot3() {
+        onView(isRoot()).check(matches(isDisplayed()));
+        Screengrab.screenshot("GameWidget");
+    }
+
+    @Test
+    public void testTakeScreenshot4() {
         onView(isRoot()).check(matches(isDisplayed()));
         Screengrab.screenshot("GameWidget");
     }
