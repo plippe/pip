@@ -3,9 +3,9 @@ update_fastlane
 default_platform(:android)
 
 platform :android do
-  desc "Build and upload to the Google Play's beta track"
-  lane :build_and_upload_beta do
-    version_code = google_play_track_version_codes(track: "beta").last + 1
+  desc "Build and upload to the Google Play's internal track"
+  lane :build_and_upload_internal do
+    version_code = google_play_track_version_codes(track: "internal").last + 1
 
     build_android_app(
       task: "bundle",
@@ -17,11 +17,25 @@ platform :android do
     )
 
     upload_to_play_store(
-      track: "beta",
+      track: "internal",
       skip_upload_changelogs: true,
       version_code: version_code,
       version_name: "1.0.#{version_code}",
       aab: "../build/app/outputs/bundle/release/app-release.aab",
+    )
+  end
+
+  desc "Promote Google Play's internal track to production"
+  lane :promote_internal_to_production do
+    upload_to_play_store(
+      track: "internal",
+      track_promote_to: "production",
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
     )
   end
 
