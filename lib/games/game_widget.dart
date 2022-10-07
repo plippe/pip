@@ -44,7 +44,7 @@ class _GameWidgetState extends State<GameWidget> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _refreshTiles,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.grey.shade900,
         child: const Icon(Icons.refresh),
       ),
     );

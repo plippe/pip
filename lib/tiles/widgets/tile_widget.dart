@@ -16,9 +16,11 @@ class TileWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () => onTap?.call(tile),
       child: Container(
-        decoration: isSelected
-            ? BoxDecoration(border: Border.all(color: Colors.grey.shade800))
-            : null,
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(5)),
+          border: Border.all(
+              color: isSelected ? Colors.grey.shade900 : Colors.grey.shade300),
+        ),
         padding: const EdgeInsets.all(7.5),
         child: Column(
           children: List.filled(

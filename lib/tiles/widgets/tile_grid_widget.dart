@@ -20,8 +20,8 @@ class TileGridWidget extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       crossAxisCount: 3,
-      crossAxisSpacing: 15,
-      mainAxisSpacing: 15,
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 10,
       children: tiles
           .map((tile) => TileWidget(
                 tile: tile,
